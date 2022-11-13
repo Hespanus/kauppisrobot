@@ -2,6 +2,7 @@
 Documentation    Testing login to Kauppis with data from excel
 Library    DataDriver    kauppis_login.xlsx    sheet_name=Taul1
 Library    SeleniumLibrary
+Library    ./.venv/Scripts/thumbnail.py
 Resource    ./kauppis_login.robot
 Suite Setup    Log In To Kauppis
 Test Template    New Item
@@ -20,13 +21,17 @@ New Item
     [Arguments]    ${kuva}    ${nimi}    ${hinta}       ${varastossa}    ${ostettavissa}      ${piilota}   	${tuoteselostus}	${painoyks}    ${p-maara}	${valmistaja}	${kategoria}
     Sleep    2s
 
-    Click Element    //*[@id="mat-radio-9"]
+    Click Element    //*[@id="mat-radio-9"]    
+
+    ${image_thumb}=    Edit Img name    ${kuva}
+
+    Log To Console    ${image_thumb}
 
     Sleep    3s
 
-    Scroll Element Into View    xpath=//img[contains(@src, '${kuva}')]
+    Scroll Element Into View    xpath=//img[contains(@src, '${image_thumb}')]
 
-    Click Image     xpath=//img[contains(@src, '${kuva}')]
+    Click Image     xpath=//img[contains(@src, '${image_thumb}')]
 
     Sleep    1s
 

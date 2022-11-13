@@ -15,5 +15,5 @@ Log In To Kauppis
     Input Password    id=mat-input-1    ${password}
     
     Click Button     xpath:/html/body/app-root/div/div/app-login/div/form[1]/button
-    Sleep    2s
+    Sleep    3s
     Go To    https://uat.tanhi-systems.net/tanhi/kauppis/item/add
