@@ -2,7 +2,7 @@
 Documentation    Testing login to Kauppis with data from excel
 Library    DataDriver    kauppis_login.xlsx    sheet_name=Taul1
 Library    SeleniumLibrary
-Library    ./.venv/Scripts/thumbnail.py
+Library    ./thumbnail.py
 Resource    ./kauppis_login.robot
 Suite Setup    Log In To Kauppis
 Test Template    New Item
