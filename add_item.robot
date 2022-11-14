@@ -81,9 +81,11 @@ New Item
 
     Sleep    3s
 
-    Click Element       //button[contains(text(),'Sulje')]
+    Go To    https://uat.tanhi-systems.net/tanhi/kauppis/item/add
 
-    Click Element       //button[contains(text(),'Lisää')]
+    #Click Element       //button[contains(text(),'Sulje')]
+
+    #Click Element       //button[contains(text(),'Lisää')]
 
 
 
