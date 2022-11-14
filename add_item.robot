@@ -5,6 +5,7 @@ Library    SeleniumLibrary
 Library    ./thumbnail.py
 Resource    ./kauppis_login.robot
 Suite Setup    Log In To Kauppis
+#Suite Teardown    Close Browser
 Test Template    New Item
 
 
@@ -21,7 +22,7 @@ New Item
     [Arguments]    ${kuva}    ${nimi}    ${hinta}       ${varastossa}    ${ostettavissa}      ${piilota}   	${tuoteselostus}	${painoyks}    ${p-maara}	${valmistaja}	${kategoria}
     Sleep    2s
 
-    Click Element    //*[@id="mat-radio-9"]    
+    Click Element    //*[@value="2"]    
 
     ${image_thumb}=    Edit Img name    ${kuva}
 
