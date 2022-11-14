@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Library    String
 Library    OperatingSystem
-Library    ./.venv/Scripts/spaces_off.py
+Library    ./spaces_off.py
 
 Suite Setup     Open Browser    https://www.yle.fi/    Chrome
 Suite Teardown    Close Browser
